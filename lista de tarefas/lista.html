@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #entrada {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #entradaTarefa {
+        font-size: 15px;
+        width: 600px;
+        height: 30px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 2px solid rgb(50, 81, 85);
+        padding-left: 10px;
+      }
+      #tarefas {
+        display: flex;
+        justify-content: space-around;
+        width: 85%;
+        height: auto;
+        margin-bottom: 30px;
+      }
+      .boxlist {
+        width: 50%;
+        height: auto;
+        border: 2px solid rgb(50, 81, 85);
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        word-wrap: break-word;
+      }
+      .sub-title {
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      .sub-title h2 {
+        margin: 5px;
+        color: rgb(6, 95, 76);
+      }
+      button {
+        margin: 15px;
+        border-radius: 5px;
+        border: none;
+        height: 35px;
+        padding: 5px 10px;
+        color: rgb(4, 4, 4);
+      }
+      #add,
+      #select,
+      #done,
+      #remov {
+        background-color: rgb(120, 215, 227);
+      }
+      #add:hover,
+      #select:hover,
+      #done:hover,
+      #remov:hover {
+        color: rgb(216, 233, 250);
+        background-color: rgb(176, 102, 28);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lista de Tarefas</h1>
+    <br />
+    <div id="entrada">
+      <input type="text" id="entradaTarefa" />
+      <button id="add">Adicionar tarefa na lista</button>
+    </div>
+    <section id="tarefas">
+      <div class="boxlist">
+        <div>
+          <div class="sub-title"><h2>Tarefas Pendentes</h2></div>
+
+          <ul id="adicionarTarefas"></ul>
+        </div>
+        <button id="select">Selecionar tarefa</button>
+        <!-- done =  finalizada -->
+        <button id="done">Marcar como finalizada</button>
+      </div>
+      <div class="boxlist">
+        <div>
+          <div class="sub-title"><h2>Tarefas Finalizadas</h2></div>
+          <ul id="tarefasFinalizadas"></ul>
+        </div>
+        <button id="select">Selecionar tarefa</button>
+        <button id="remov">Remover tarefa finalizda</button>
+      </div>
+    </section>
+
+    <script src="lista.js"></script>
+  </body>
+</html>
